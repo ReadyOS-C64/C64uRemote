@@ -85,6 +85,7 @@ The idea for that version is to use:
 - stored macros for repeated workflows such as loading a config, running a `.d64`, loading a binary into REU, and then launching an app
 - remembering recently loaded items and common last-used targets
 - richer navigation of the C64 Ultimate file and menu system so loading content directly from the handheld becomes practical
+- an on-device settings UI for editing Wi-Fi credentials and the C64 Ultimate host/password instead of relying only on build-time `.env` values, while still allowing sensible hard-coded defaults
 
 ## License
 
