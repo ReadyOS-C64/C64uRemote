@@ -46,6 +46,18 @@ The deploy script reads `.env` and generates `src/build_env.h` locally at build 
 - VS Code
 - M5Unified
 
+## Planned Next Version
+
+A more capable follow-up version is planned for the M5Dial.
+
+The idea for that version is to use:
+
+- the dial itself for CPU speed control
+- touchscreen buttons for common actions
+- stored macros for repeated workflows such as loading a config, running a `.d64`, loading a binary into REU, and then launching an app
+- remembering recently loaded items and common last-used targets
+- richer navigation of the C64 Ultimate file and menu system so loading content directly from the handheld becomes practical
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
