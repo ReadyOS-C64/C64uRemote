@@ -30,6 +30,19 @@ C64U_TARGET_PASSWORD=karl
 
 The deploy script reads `.env` and generates `src/build_env.h` locally at build time. `.env` and `src/build_env.h` are ignored and should not be committed.
 
+## C64 Ultimate Setup
+
+The target C64 Ultimate needs the REST API enabled and reachable on your LAN.
+
+Required on the C64 Ultimate side:
+
+- enable the REST API / web API support
+- set a REST password if you want authenticated control
+- make sure the device IP address on your LAN matches `C64U_TARGET_HOST`
+- make sure the password matches `C64U_TARGET_PASSWORD`
+
+This app expects to talk to the C64 Ultimate over HTTP on your local network and uses the configured password for authenticated API calls.
+
 ## Build and Flash
 
 ```bash
@@ -38,6 +51,21 @@ The deploy script reads `.env` and generates `src/build_env.h` locally at build 
 ./scripts/deploy.sh --build-only
 ./scripts/deploy.sh --port /dev/cu.usbserial-XXXX
 ```
+
+## Build Stack
+
+This project currently builds with the following stack:
+
+- macOS development environment
+- Python 3 with a local virtualenv created by `./scripts/setup.sh`
+- PlatformIO `6.x`
+- Espressif32 platform `6.7.0`
+- Arduino framework for ESP32 `2.0.16`
+- M5Unified `0.2.13`
+- M5GFX `0.2.19`
+- M5Stack M5StickC Plus2 target board
+
+VS Code is optional but convenient; the scripts are enough to build and flash from the terminal.
 
 ## Hardware / Software
 
