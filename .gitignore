@@ -1,0 +1,5 @@
+.DS_Store
+.pio/
+.venv/
+.env
+src/build_env.h
